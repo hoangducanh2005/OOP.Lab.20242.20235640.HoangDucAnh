@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b813ff25-31c6-4614-808b-a97a60381205" name="Changes" comment="" />
+    <list default="true" id="b813ff25-31c6-4614-808b-a97a60381205" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EquationSolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/EquationSolver.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -70,6 +73,8 @@
       <workItem from="1741065456600" duration="1207000" />
       <workItem from="1741068235303" duration="34000" />
       <workItem from="1741068714249" duration="33000" />
+      <workItem from="1741098511823" duration="223000" />
+      <workItem from="1741099011399" duration="259000" />
     </task>
     <servers />
   </component>

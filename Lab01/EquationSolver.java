@@ -105,10 +105,10 @@ public class EquationSolver {
             if (discriminant > 0) {
                 double root1 = (-b2nd + Math.sqrt(discriminant)) / (2 * a2nd);
                 double root2 = (-b2nd - Math.sqrt(discriminant)) / (2 * a2nd);
-                System.out.println("The equation has two real roots: x1 = " + root1 + ", x2 = " + root2);
+                System.out.println("The equation has 2 real roots: x1 = " + root1 + ", x2 = " + root2);
             } else if (discriminant == 0) {
                 double root = -b2nd / (2 * a2nd);
-                System.out.println("The equation has one real root: x = " + root);
+                System.out.println("The equation has 1 real root: x = " + root);
             } else {
                 System.out.println("The equation has no real roots.");
             }

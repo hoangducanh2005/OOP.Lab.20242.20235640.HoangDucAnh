@@ -1,0 +1,2 @@
+6
+Biểu đồ UC sai, biểu đồ lớp dùng ký hiệu kế thừa là sai

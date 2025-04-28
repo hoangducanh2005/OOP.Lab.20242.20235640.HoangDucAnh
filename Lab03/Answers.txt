@@ -1,0 +1,32 @@
+Question: Alternatively, to compare items in the cart, instead of using the Comparator class I have mentioned, you can use the Comparable interface1 and override the compareTo()method. You can refer to the Java docs to see the information of this interface.
+1. What class should implement the Comparable interface?
+- Lớp Media nên implement Comparable<Media>
+- Vì đây là lớp cha của Book, DVD, CD,… nên dễ quản lý và sắp xếp các media chung.
+
+2. In those classes, how should you implement the compareTo()method to reflect the ordering that we want?
+- Ví dụ muốn sắp xếp theo tiêu đề tăng dần, nếu trùng thì theo giá giảm dần:
+public int compareTo(Media other) {
+    int titleCompare = this.title.compareTo(other.title);
+    if (titleCompare != 0) return titleCompare;
+    return Float.compare(other.cost, this.cost); // giảm dần
+}
+3. Can we have two ordering rules of the item (by title then cost and by cost then title) if we use this Comparable interface approach? 
+- Không.
+- Comparable chỉ cho phép một cách sắp xếp duy nhất (qua compareTo()).
+- Nếu cần nhiều cách sắp xếp (ví dụ theo cost rồi title, hoặc ngược lại), ta nên dùng Comparator như đã làm trước đó.
+
+4. Suppose the DVDs have a different ordering rule from the other media types, that is by title, then decreasing length, then cost. How would you modify your code to allow this?
+- Override compareTo() trong lớp DigitalVideoDisc:
+public int compareTo(Media other) {
+    if (other instanceof DigitalVideoDisc) {
+        DigitalVideoDisc dvd = (DigitalVideoDisc) other;
+        int titleCompare = this.getTitle().compareTo(dvd.getTitle());
+        if (titleCompare != 0) return titleCompare;
+
+        int lengthCompare = Integer.compare(dvd.getLength(), this.getLength()); // giảm dần
+        if (lengthCompare != 0) return lengthCompare;
+
+        return Float.compare(this.getCost(), dvd.getCost()); // tăng dần
+    }
+    return super.compareTo(other); 
+}

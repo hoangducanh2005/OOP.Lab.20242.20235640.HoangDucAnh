@@ -1,0 +1,31 @@
+Câu 1. What are the advantages of Polymorphism?
+- Lợi ích của tính đa hình trong lập trình hướng đối tượng :
+	+ Tạo ra mã nguồn linh hoạt và dễ bảo trì. Đồng thời việc viết mã cũng linh hoạt hơn, các đối tượng khác nhau cũng có thể dùng chung một phương thức
+	+ Tái sử dụng mã nguồn. Có thể sử dụng lại đoạn mã chung cho một lớp cha, các lớp con có thể sử dụng và mở rộng tùy ý.
+	+ Linh hoạt và dễ mở rộng. Khi cần thêm chức năng mới, chỉ cần tạo lớp con mới mà không cần thay đổi các phần chương trình đã có.
+	+ Tăng tính trừu tượng. Ta có thể thao tác với đối tượng qua lớp cha mà không cần biết chính xác đối tượng đó thuộc lớp con nào.
+- Ví dụ :
+ Media media 1 = new Book();
+ Media media 2 = new DigitalVideoDisc();
+ 
+ media1.play();
+ media2.play();
+
+ Cả hai biến ở đây đều có kiểu Media, nhưng play() sẽ gọi đúng phương thức của BOOK và DigitalVideoDisc. Từ đó ta không cần viết code riêng cho từng loại.
+
+Câu 2. How is Inheritance useful to achieve Polymorphism in Java?
+- Khi một lớp con kế thừa lớp cha và ghi đè các phương thức, ta có thể dùng lớp cha để gọi lớp con - tạo ra tính đa hình.
+- Nói ngắn gọn, một đối tượng cha dùng để đại diện cho nhiều đối tượng con khác nhau.
+
+Ví dụ : Media m = new Book();   gọi m.play()
+
+Câu 3. What are the differences between Polymorphism and Inheritance in Java?
+
+- Kế thừa : 
+	+ Một lớp mới kế thừa các thuộc tính và phương thức của một lớp hiện có.
+	+ Tái sử dụng code và thiết lập mối quan hệ cha-con giữa các lớp.
+	+ Dùng extends để tạo lớp con từ lớp cha.
+- Đa hình :
+	+ Một đối tượng có thể có nhiều hình thái khác nhau (nhiều cách hành xử khác nhau) tùy vào bối cảnh.
+	+ Cho phép cùng một phương thức có hành vi khác nhau tùy đối tượng thực tế.
+	+ Dùng ghi đè phương thức (Override) hoặc giao tiếp thông qua lớp cha hoặc interface.

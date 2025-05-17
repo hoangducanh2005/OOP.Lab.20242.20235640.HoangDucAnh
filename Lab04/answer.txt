@@ -1,0 +1,57 @@
+1. So sánh top-level containers trong Swing và AWT
+AWT:
+
+Sử dụng các lớp như Frame, Dialog, Applet
+
+Là container cấp cao được dựng bằng thành phần native (phụ thuộc hệ điều hành)
+
+Swing:
+
+Sử dụng các lớp như JFrame, JDialog, JApplet
+
+Là bản mở rộng của AWT
+
+Độc lập hệ điều hành, dễ dàng tùy chỉnh giao diện hơn
+
+2. So sánh tên lớp thành phần (components) trong AWT và Swing
+| Thành phần AWT | Thành phần tương ứng trong Swing | Mô tả chức năng                          |
+|----------------|----------------------------------|------------------------------------------|
+| Label          | JLabel                           | Hiển thị đoạn văn bản tĩnh               |
+| TextField      | JTextField                       | Nhập văn bản trên 1 dòng                 |
+| TextArea       | JTextArea                        | Nhập hoặc hiển thị văn bản nhiều dòng    |
+| Button         | JButton                          | Nút bấm dùng để thực hiện hành động      |
+| Checkbox       | JCheckBox                        | Chọn nhiều mục trong một nhóm            |
+| RadioButton    | JRadioButton                     | Chọn duy nhất 1 mục trong nhóm           |
+| List           | JList                            | Danh sách lựa chọn nhiều mục             |
+| Choice         | JComboBox                        | Danh sách xổ xuống        |
+| Frame          | JFrame                           | Cửa sổ chính của ứng dụng                |
+| Dialog         | JDialog                          | Hộp thoại phụ, thường để xác nhận/hỏi ý  |
+| Panel          | JPanel                           | Chứa các thành phần khác, layout riêng   |
+=> Nhận xét : thành phần trong Swing có tiền tố J thêm vào so với AWT
+
+
+3. So sánh về xử lý sự kiện (event-handling)
+
+AWT:
+
+Hỗ trợ ít loại sự kiện hơn
+
+Cơ bản, đủ dùng cho ứng dụng đơn giản
+
+Swing:
+
+Hỗ trợ nhiều sự kiện hơn: ChangeEvent, TreeSelectionEvent, ListSelectionEvent...
+
+Dễ tùy chỉnh và mở rộng chức năng
+
+Có thể kết hợp với các mẫu thiết kế như MVC để tách biệt xử lý giao diện và logic
+
+=> Swing vượt trội hơn AWT , AWT đơn giản hơn
+
+
+4. Giao diện hiển thị : 
+AWT sử dụng các thành phần giao diện do hệ điều hành cung cấp. Vì vậy, ứng dụng viết bằng AWT có giao diện phụ thuộc vào nền tảng: chạy trên Windows sẽ khác với chạy trên Linux hay macOS. Điều này làm cho giao diện thiếu sự nhất quán.
+
+Swing thì khác: nó vẽ toàn bộ giao diện bằng Java, không phụ thuộc vào hệ điều hành. Nhờ đó, ứng dụng Swing có giao diện đồng nhất trên mọi nền tảng, dễ kiểm soát và dễ thay đổi.
+
+=> Swing mang lại sự linh hoạt và nhất quán về giao diện, phù hợp với nhiều hệ điều hành khác nhau, điều mà AWT không làm được.
